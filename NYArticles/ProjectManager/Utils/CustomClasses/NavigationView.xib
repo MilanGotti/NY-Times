@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="NYArticles" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonBackWidth" destination="VjR-LW-3oB" id="7ir-FE-x3z"/>
+                <outlet property="buttonClose" destination="KmK-CP-pyV" id="hMf-3D-Ah5"/>
+                <outlet property="labelTitle" destination="aK5-q6-Rfe" id="pVo-px-FRi"/>
+                <outlet property="labelTitleLeading" destination="bHh-sg-jNm" id="2YX-vG-ZLl"/>
+                <outlet property="searchButton" destination="XVO-MT-WYM" id="xUu-OS-IxO"/>
+                <outlet property="searchView" destination="OcQ-Ny-nNE" id="9A6-X2-AbP"/>
+                <outlet property="searchViewLeading" destination="TdG-Cm-l3d" id="McH-IF-Sx0"/>
+                <outlet property="searchViewWidth" destination="EOB-wd-Tsw" id="Yk2-cE-adP"/>
+                <outlet property="textField" destination="ZIc-hj-xwQ" id="HWd-nb-0P8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUb-Ue-h5b">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcQ-Ny-nNE">
+                            <rect key="frame" x="269" y="4" width="135" height="36"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIc-hj-xwQ">
+                                    <rect key="frame" x="36" y="1" width="63" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmK-CP-pyV">
+                                    <rect key="frame" x="99" y="0.0" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="VjR-LW-3oB"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                                    <state key="normal" image="Close"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVO-MT-WYM">
+                                    <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="XVO-MT-WYM" secondAttribute="height" multiplier="1:1" id="TNO-0a-xBO"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                                    <state key="normal" image="search"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="KmK-CP-pyV" secondAttribute="trailing" id="20A-GA-j5P"/>
+                                <constraint firstItem="XVO-MT-WYM" firstAttribute="leading" secondItem="OcQ-Ny-nNE" secondAttribute="leading" id="7j7-2T-Pln"/>
+                                <constraint firstItem="XVO-MT-WYM" firstAttribute="top" secondItem="OcQ-Ny-nNE" secondAttribute="top" id="CvQ-vY-2TY"/>
+                                <constraint firstAttribute="width" constant="135" id="EOB-wd-Tsw"/>
+                                <constraint firstItem="KmK-CP-pyV" firstAttribute="leading" secondItem="ZIc-hj-xwQ" secondAttribute="trailing" id="PpY-hC-1ij"/>
+                                <constraint firstItem="ZIc-hj-xwQ" firstAttribute="top" secondItem="OcQ-Ny-nNE" secondAttribute="top" constant="1" id="PyU-Yv-8Yd"/>
+                                <constraint firstAttribute="bottom" secondItem="KmK-CP-pyV" secondAttribute="bottom" id="TpX-Ad-0Ym"/>
+                                <constraint firstItem="KmK-CP-pyV" firstAttribute="top" secondItem="OcQ-Ny-nNE" secondAttribute="top" id="UW9-aw-p6S"/>
+                                <constraint firstAttribute="bottom" secondItem="ZIc-hj-xwQ" secondAttribute="bottom" constant="1" id="UmQ-Xg-gQM"/>
+                                <constraint firstAttribute="bottom" secondItem="XVO-MT-WYM" secondAttribute="bottom" id="gZC-WX-KiU"/>
+                                <constraint firstItem="ZIc-hj-xwQ" firstAttribute="leading" secondItem="XVO-MT-WYM" secondAttribute="trailing" id="lQ5-v9-R2K"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NY Times Most Populer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK5-q6-Rfe">
+                            <rect key="frame" x="10" y="0.0" width="239" height="44"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.019607843137254902" green="0.2196078431372549" blue="0.41960784313725491" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="OcQ-Ny-nNE" secondAttribute="bottom" constant="4" id="2QV-PS-dew"/>
+                        <constraint firstItem="OcQ-Ny-nNE" firstAttribute="top" secondItem="bUb-Ue-h5b" secondAttribute="top" constant="4" id="7CX-xZ-SZw"/>
+                        <constraint firstItem="aK5-q6-Rfe" firstAttribute="top" secondItem="bUb-Ue-h5b" secondAttribute="top" id="PrA-WB-y67"/>
+                        <constraint firstItem="OcQ-Ny-nNE" firstAttribute="leading" secondItem="aK5-q6-Rfe" secondAttribute="trailing" constant="20" id="TdG-Cm-l3d"/>
+                        <constraint firstAttribute="trailing" secondItem="OcQ-Ny-nNE" secondAttribute="trailing" constant="10" id="YMO-BJ-MKb"/>
+                        <constraint firstItem="aK5-q6-Rfe" firstAttribute="leading" secondItem="bUb-Ue-h5b" secondAttribute="leading" constant="10" id="bHh-sg-jNm"/>
+                        <constraint firstAttribute="bottom" secondItem="aK5-q6-Rfe" secondAttribute="bottom" id="jaz-LO-H6n"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bUb-Ue-h5b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FmY-J4-Duk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bUb-Ue-h5b" secondAttribute="trailing" id="bej-Qa-8ig"/>
+                <constraint firstItem="bUb-Ue-h5b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ual-cp-0Zv"/>
+                <constraint firstAttribute="bottom" secondItem="bUb-Ue-h5b" secondAttribute="bottom" id="zHP-ZS-R3k"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-90.736607142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close" width="32" height="32"/>
+        <image name="search" width="32" height="32"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
