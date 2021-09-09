@@ -63,6 +63,7 @@
 		88D13C4D26E8D37000BD41CD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 88D13C4C26E8D37000BD41CD /* SDWebImage */; };
 		88D13C5026E8D4D600BD41CD /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D13C4F26E8D4D600BD41CD /* UIString+Extension.swift */; };
 		88D13C5226E8DB1300BD41CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D13C5126E8DB1300BD41CD /* DetailViewController.swift */; };
+		BD228C7826E9066F0060B149 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD228C7726E9066F0060B149 /* TabBarController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		88D13C4626E8D19700BD41CD /* MediaMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaMetadata.swift; sourceTree = "<group>"; };
 		88D13C4F26E8D4D600BD41CD /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		88D13C5126E8DB1300BD41CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD228C7726E9066F0060B149 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			children = (
 				8863DAFE26E88DBA00642139 /* Main.storyboard */,
 				8863DB0326E88DBC00642139 /* LaunchScreen.storyboard */,
+				BD228C7726E9066F0060B149 /* TabBarController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				88D13C0E26E8B13000BD41CD /* Poppins-Regular.ttf in Resources */,
 				88D13C2026E8B90D00BD41CD /* MostViewedArticlesCell.xib in Resources */,
 				8863DB1A26E8956500642139 /* NavigationView.xib in Resources */,
+				BD228C7826E9066F0060B149 /* TabBarController.storyboard in Resources */,
 				88D13C1026E8B13000BD41CD /* Poppins-Bold.ttf in Resources */,
 				8863DB0026E88DBA00642139 /* Main.storyboard in Resources */,
 				88D13C0726E8B13000BD41CD /* Poppins-BoldItalic.ttf in Resources */,
@@ -636,6 +640,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NYArticles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NYArticles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -51,7 +51,7 @@ class NavigationView: UIView {
         self.searchView.setCorner(color: UIColor.appWhite.withAlphaComponent(0.1))
         self.labelTitle.setupLabel(font: AppFont.size18.bold, color: .appWhite)
         self.hideTextField()
-        self.textField.setPlaceholder(text: "Search by names", color: .appWhite.withAlphaComponent(0.5), font: AppFont.size15.regular)
+        self.textField.setPlaceholder(text: "Search by names", color: UIColor.appWhite.withAlphaComponent(0.5), font: AppFont.size15.regular)
         self.textField.setupField(font: AppFont.size15.regular, color: .appWhite)
         
         self.searchButton.addTarget(self, action: #selector(searchButtonClick), for: .touchUpInside)
