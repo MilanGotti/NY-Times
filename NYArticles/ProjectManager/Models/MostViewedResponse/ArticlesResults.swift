@@ -31,6 +31,7 @@ class ArticlesResults: Codable {
     case title
     case desFacet = "des_facet"
     case geoFacet = "geo_facet"
+    case multiMedia = "multimedia"
   }
 
   var assetId: Int?
@@ -54,8 +55,9 @@ class ArticlesResults: Codable {
   var title: String?
   var desFacet: [String]?
   var geoFacet: [String]?
-
-  init (assetId: Int?, section: String?, uri: String?, url: String?, perFacet: [String]?, source: String?, id: Int?, type: String?, publishedDate: String?, nytdsection: String?, abstract: String?, orgFacet: [String]?, media: [Media]?, updated: String?, subsection: String?, adxKeywords: String?, byline: String?, etaId: Int?, title: String?, desFacet: [String]?, geoFacet: [String]?) {
+    var multiMedia: [MediaMetadata]?
+    
+    init (assetId: Int?, section: String?, uri: String?, url: String?, perFacet: [String]?, source: String?, id: Int?, type: String?, publishedDate: String?, nytdsection: String?, abstract: String?, orgFacet: [String]?, media: [Media]?, updated: String?, subsection: String?, adxKeywords: String?, byline: String?, etaId: Int?, title: String?, desFacet: [String]?, geoFacet: [String]?, multiMedia:[MediaMetadata]? ) {
     self.assetId = assetId
     self.section = section
     self.uri = uri
@@ -77,6 +79,7 @@ class ArticlesResults: Codable {
     self.title = title
     self.desFacet = desFacet
     self.geoFacet = geoFacet
+        self.multiMedia = multiMedia
   }
 
   required init(from decoder: Decoder) throws {
@@ -102,6 +105,7 @@ class ArticlesResults: Codable {
     title = try container.decodeIfPresent(String.self, forKey: .title)
     desFacet = try container.decodeIfPresent([String].self, forKey: .desFacet)
     geoFacet = try container.decodeIfPresent([String].self, forKey: .geoFacet)
+    multiMedia = try container.decodeIfPresent([MediaMetadata].self, forKey: .multiMedia)
   }
 
 }

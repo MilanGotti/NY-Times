@@ -13,6 +13,7 @@ class AppTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         self.tabBar.barTintColor = .appBlue
+        self.tabBar.tintColor = .appGreen
         self.tabBar.isTranslucent = false
         
     }

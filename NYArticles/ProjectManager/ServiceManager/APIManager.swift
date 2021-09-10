@@ -17,13 +17,19 @@ class APIManager {
         return instance
     }
     
-    //MARK:- Login
+    //MARK:- Most Viewed
     func mostViewed(finalResult:@escaping (Result<MostViewedModel,ErrorModel>)-> Void) {
         Provider.request(.MostViewed) { (response) in
             self.processResponse(result: response, completion: finalResult)
         }
     }
     
+    //MARK:- Home
+    func homeArticals(type: String, finalResult:@escaping (Result<MostViewedModel,ErrorModel>)-> Void) {
+        Provider.request(.Home(type: type)) { (response) in
+            self.processResponse(result: response, completion: finalResult)
+        }
+    }
     
 
 }
