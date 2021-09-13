@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeTableViewCell" rowHeight="377" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="NYArticles" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="377"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="377"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdM-I1-YxS">
+                        <rect key="frame" x="20" y="10" width="301" height="357"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder_image" translatesAutoresizingMaskIntoConstraints="NO" id="nWR-v8-kmg">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="357"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acH-er-HTt">
+                                <rect key="frame" x="0.0" y="286" width="301" height="71"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PLh-Tt-cbr">
+                                    <rect key="frame" x="0.0" y="0.0" width="301" height="71"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What You Get for $2.7 Million in California" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G45-WO-IjH">
+                                            <rect key="frame" x="10" y="15" width="281" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="G45-WO-IjH" firstAttribute="leading" secondItem="PLh-Tt-cbr" secondAttribute="leading" constant="10" id="0Q6-yT-9al"/>
+                                        <constraint firstItem="G45-WO-IjH" firstAttribute="top" secondItem="PLh-Tt-cbr" secondAttribute="top" constant="15" id="6BA-dH-0f7"/>
+                                        <constraint firstAttribute="trailing" secondItem="G45-WO-IjH" secondAttribute="trailing" constant="10" id="JJv-Ru-7n8"/>
+                                        <constraint firstAttribute="bottom" secondItem="G45-WO-IjH" secondAttribute="bottom" constant="15" id="agb-7e-KyV"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="acH-er-HTt" secondAttribute="bottom" id="FZy-Ej-5WG"/>
+                            <constraint firstAttribute="trailing" secondItem="acH-er-HTt" secondAttribute="trailing" id="TVU-cG-kX4"/>
+                            <constraint firstAttribute="bottom" secondItem="nWR-v8-kmg" secondAttribute="bottom" id="UnS-nU-jWy"/>
+                            <constraint firstItem="acH-er-HTt" firstAttribute="leading" secondItem="hdM-I1-YxS" secondAttribute="leading" id="bP8-Pw-9jh"/>
+                            <constraint firstItem="nWR-v8-kmg" firstAttribute="leading" secondItem="hdM-I1-YxS" secondAttribute="leading" id="lHl-6O-WGI"/>
+                            <constraint firstAttribute="trailing" secondItem="nWR-v8-kmg" secondAttribute="trailing" id="ucZ-9b-zYf"/>
+                            <constraint firstItem="nWR-v8-kmg" firstAttribute="top" secondItem="hdM-I1-YxS" secondAttribute="top" id="v51-64-FXZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="hdM-I1-YxS" secondAttribute="bottom" constant="10" id="3VT-pC-xcf"/>
+                    <constraint firstAttribute="trailing" secondItem="hdM-I1-YxS" secondAttribute="trailing" constant="20" id="jAe-dt-E1b"/>
+                    <constraint firstItem="hdM-I1-YxS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kmf-EY-Dua"/>
+                    <constraint firstItem="hdM-I1-YxS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="yAf-wH-02P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="articleImage" destination="nWR-v8-kmg" id="lHz-32-lor"/>
+                <outlet property="labelTitle" destination="G45-WO-IjH" id="SIe-cN-Hih"/>
+                <outlet property="mainView" destination="hdM-I1-YxS" id="T0F-6z-aIv"/>
+            </connections>
+            <point key="canvasLocation" x="155.79710144927537" y="209.26339285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeHolder_image" width="440" height="293"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

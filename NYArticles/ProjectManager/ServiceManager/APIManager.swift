@@ -17,6 +17,7 @@ class APIManager {
         return instance
     }
     
+    
     //MARK:- Most Viewed
     func mostViewed(finalResult:@escaping (Result<MostViewedModel,ErrorModel>)-> Void) {
         Provider.request(.MostViewed) { (response) in
@@ -25,8 +26,36 @@ class APIManager {
     }
     
     //MARK:- Home
-    func homeArticals(type: String, finalResult:@escaping (Result<MostViewedModel,ErrorModel>)-> Void) {
-        Provider.request(.Home(type: type)) { (response) in
+    func homeArticals(finalResult:@escaping (Result<TopStoriesModel,ErrorModel>)-> Void) {
+        Provider.request(.Home(type: "world")) { (response) in
+            self.processResponse(result: response, completion: finalResult)
+        }
+    }
+    
+    //MARK:- Arts
+    func ArtsArticals(finalResult:@escaping (Result<TopStoriesModel,ErrorModel>)-> Void) {
+        Provider.request(.arts) { (response) in
+            self.processResponse(result: response, completion: finalResult)
+        }
+    }
+    
+    //MARK:- Science
+    func ScienceArticals(finalResult:@escaping (Result<TopStoriesModel,ErrorModel>)-> Void) {
+        Provider.request(.science) { (response) in
+            self.processResponse(result: response, completion: finalResult)
+        }
+    }
+    
+    //MARK:- US
+    func USArticals(finalResult:@escaping (Result<TopStoriesModel,ErrorModel>)-> Void) {
+        Provider.request(.us) { (response) in
+            self.processResponse(result: response, completion: finalResult)
+        }
+    }
+    
+    //MARK:- World
+    func WorldArticals(finalResult:@escaping (Result<TopStoriesModel,ErrorModel>)-> Void) {
+        Provider.request(.world) { (response) in
             self.processResponse(result: response, completion: finalResult)
         }
     }

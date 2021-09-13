@@ -9,4 +9,9 @@ import Foundation
 
 enum appIdentifiers : String {
     case MostViewedArticlesCell
+    case HomeTableViewCell
+    
+    var string: String {
+        return self.rawValue
+    }
 }

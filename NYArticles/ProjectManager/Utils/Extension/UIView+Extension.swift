@@ -12,10 +12,7 @@ extension UIView {
     
     func setCorner(color: UIColor = .appLightGray ,size: CGFloat = 8, addShadow: Bool = false){
         self.backgroundColor = color
-        
         self.layer.cornerRadius = size
-        self.clipsToBounds = true
-        
         if addShadow {
             layer.masksToBounds = false
             layer.shadowColor = UIColor.lightGray.cgColor
@@ -23,7 +20,7 @@ extension UIView {
             layer.shadowOffset = CGSize(width: 2, height: 2)
             layer.shadowRadius = 1
         }
-        
+        self.clipsToBounds = true
     }
     
 }

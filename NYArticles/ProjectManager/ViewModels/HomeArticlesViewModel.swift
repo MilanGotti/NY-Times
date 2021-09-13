@@ -9,7 +9,8 @@ import Foundation
 
 class HomeArticlesViewModel {
     
-    var articlesListArray = [ArticlesResults]()
+     
+    var articlesListArray = [TopStoriesResults]()
     
     //MARK: Fetch Articles list
     func getHomeArticles(type: String, completion:@escaping(Bool, String)->Void) {
@@ -19,12 +20,12 @@ class HomeArticlesViewModel {
             return
         }
         
-        APIManager.shared.homeArticals(type: type) { (response) in
+        APIManager.shared.homeArticals() { (response) in
             switch response {
             case .failure(let error):
                 completion(false, error.localizedDescription)
             case .success(let response) :
-                self.articlesListArray = response.articlesResults ?? [ArticlesResults]()
+                self.articlesListArray = response.topStoriesResults ?? [TopStoriesResults]()
                 completion(true, "")
             }
         }

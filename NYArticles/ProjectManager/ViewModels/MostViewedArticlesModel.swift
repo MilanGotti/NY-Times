@@ -9,6 +9,8 @@ import UIKit
 
 class MostViewedArticlesModel {
     //MARK: Variables
+    
+    var viewedArticles = [MostViewedList]()
     var articlesListArray = [ArticlesResults]()
     var filterArticlesList = [ArticlesResults]()
     var isSearching = false
@@ -26,7 +28,15 @@ class MostViewedArticlesModel {
             case .failure(let error):
                 completion(false, error.localizedDescription)
             case .success(let response) :
-                self.articlesListArray = response.articlesResults ?? [ArticlesResults]()
+                let articlesTypes = response.articlesResults?.map({ $0.section ?? "" }).uniqued()
+                for type in articlesTypes ?? [String]() {
+                    let articleList = response.articlesResults?.filter({ $0.section == type })
+                    let viewedArticle = MostViewedList()
+                    viewedArticle.type = type == "U.S." ? "us" : type
+                    viewedArticle.articlesResults = articleList
+                    self.viewedArticles.append(viewedArticle)
+                }
+                //self.articlesListArray = response.articlesResults ?? [ArticlesResults]()
                 completion(true, "")
             }
         })
@@ -46,4 +56,36 @@ class MostViewedArticlesModel {
     
     
     
+}
+
+extension Sequence where Element: Hashable {
+    func uniqued() -> [Element] {
+        var set = Set<Element>()
+        return filter { set.insert($0).inserted }
+    }
+}
+
+
+class MostViewedList: Codable {
+
+  enum CodingKeys: String, CodingKey {
+    case type
+    case articlesResults = "results"
+  }
+
+  var type: String?
+  var articlesResults: [ArticlesResults]?
+  
+
+  init () {
+    
+  }
+
+  required init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    type = try container.decodeIfPresent(String.self, forKey: .type)
+    articlesResults = try container.decodeIfPresent([ArticlesResults].self, forKey: .articlesResults)
+    
+  }
+
 }

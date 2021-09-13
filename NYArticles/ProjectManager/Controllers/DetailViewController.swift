@@ -8,12 +8,10 @@
 import UIKit
 import WebKit
 
-class DetailViewController: BaseViewController {
+class DetailViewController: UIViewController {
 
     //MARK: Outlets
-    @IBOutlet weak var viewNavigation: UIView!
-    @IBOutlet weak var buttonBack: UIButton!
-    @IBOutlet weak var labelDetail: UILabel!
+    @IBOutlet weak var buttonClose: UIButton!
     @IBOutlet weak var webView: WKWebView!
     
     //MARK: Declarations
@@ -25,24 +23,38 @@ class DetailViewController: BaseViewController {
         self.setupView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      
+      UIView.animate(withDuration: 0.2) {
+        self.buttonClose.alpha = 0
+      }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+      return true
+    }
+    
     //MARK: Button Actions
-    @objc func buttonBackClick(_ sender: UIButton){
-        self.navigationController?.popViewController(animated: true)
+    @objc func buttonCloseClick(_ sender: UIButton){
+        dismiss(animated: true)
     }
     
     //MARK: Other Methods
     
     func setupView() {
         
-        self.labelDetail.setupLabel(title: "Details", font: AppFont.size18.bold, color: .appWhite)
-        self.viewNavigation.backgroundColor = .appBlue
-        self.buttonBack.addTarget(self, action: #selector(buttonBackClick), for: .touchUpInside)
+        
+        self.buttonClose.addTarget(self, action: #selector(buttonCloseClick), for: .touchUpInside)
         
         let url = URL(string: self.urlString)
         let request = URLRequest(url: url!)
         webView.navigationDelegate = self
         webView.load(request)
     }
+    
+    
+    
     
     
 }
