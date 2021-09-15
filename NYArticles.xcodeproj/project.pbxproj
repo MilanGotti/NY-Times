@@ -67,6 +67,8 @@
 		BD5EC67526EF881A00A52225 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5EC67326EF881A00A52225 /* HomeTableViewCell.swift */; };
 		BD5EC67626EF881A00A52225 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5EC67426EF881A00A52225 /* HomeTableViewCell.xib */; };
 		BD5EC67D26EF99A300A52225 /* PopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5EC67C26EF99A300A52225 /* PopAnimation.swift */; };
+		BDAE10BB26F0E6A30090644C /* ArticleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE10B926F0E6A30090644C /* ArticleHeaderView.swift */; };
+		BDAE10BC26F0E6A30090644C /* ArticleTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE10BA26F0E6A30090644C /* ArticleTypesCell.swift */; };
 		BDCC7C3B26EBAA9E00D8ED2E /* TopViewdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC7C3A26EBAA9E00D8ED2E /* TopViewdViewController.swift */; };
 		BDCC7C4026EBAB0300D8ED2E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC7C3F26EBAB0300D8ED2E /* MoviesViewController.swift */; };
 		BDCC7C4626EBBE6200D8ED2E /* HomeArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC7C4526EBBE6200D8ED2E /* HomeArticlesViewModel.swift */; };
@@ -138,6 +140,8 @@
 		BD5EC67326EF881A00A52225 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		BD5EC67426EF881A00A52225 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		BD5EC67C26EF99A300A52225 /* PopAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
+		BDAE10B926F0E6A30090644C /* ArticleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHeaderView.swift; sourceTree = "<group>"; };
+		BDAE10BA26F0E6A30090644C /* ArticleTypesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTypesCell.swift; sourceTree = "<group>"; };
 		BDCC7C3A26EBAA9E00D8ED2E /* TopViewdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewdViewController.swift; sourceTree = "<group>"; };
 		BDCC7C3F26EBAB0300D8ED2E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		BDCC7C4526EBBE6200D8ED2E /* HomeArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeArticlesViewModel.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 		8863DB0F26E88EB800642139 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDAE10B826F0E6990090644C /* New Group */,
 				BD5EC67226EF87DB00A52225 /* Home */,
 				88D13C1C26E8B8B000BD41CD /* ViewedArticles */,
 			);
@@ -375,6 +380,8 @@
 		88D13C1C26E8B8B000BD41CD /* ViewedArticles */ = {
 			isa = PBXGroup;
 			children = (
+				BDAE10BA26F0E6A30090644C /* ArticleTypesCell.swift */,
+				BDAE10B926F0E6A30090644C /* ArticleHeaderView.swift */,
 				88D13C1D26E8B90D00BD41CD /* MostViewedArticlesCell.swift */,
 				88D13C1E26E8B90D00BD41CD /* MostViewedArticlesCell.xib */,
 			);
@@ -407,6 +414,13 @@
 				BD5EC67C26EF99A300A52225 /* PopAnimation.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		BDAE10B826F0E6990090644C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		BDCC7C3926EBAA8600D8ED2E /* TopViewed */ = {
@@ -555,9 +569,11 @@
 				88D13C1926E8B23C00BD41CD /* StringConstant.swift in Sources */,
 				BDCC7C3B26EBAA9E00D8ED2E /* TopViewdViewController.swift in Sources */,
 				88D13C4926E8D19700BD41CD /* Media.swift in Sources */,
+				BDAE10BC26F0E6A30090644C /* ArticleTypesCell.swift in Sources */,
 				88D13C3626E8C90B00BD41CD /* ErrorConstant.swift in Sources */,
 				BD5EC67D26EF99A300A52225 /* PopAnimation.swift in Sources */,
 				8863DAFD26E88DBA00642139 /* ViewController.swift in Sources */,
+				BDAE10BB26F0E6A30090644C /* ArticleHeaderView.swift in Sources */,
 				BD5EC67526EF881A00A52225 /* HomeTableViewCell.swift in Sources */,
 				BDF1922C26ECBE1D00B08DEA /* TopStoriesResults.swift in Sources */,
 				88D13BED26E8AE4D00BD41CD /* UIView+Extension.swift in Sources */,
